@@ -1,0 +1,11 @@
+#include<stdio.h>
+/**
+ * main - print err message
+ *
+ * Return:1(Failed)
+ */
+int main(void)
+{
+	fprintf("and that piece of art is useful\" - Dora Korpar, 2015-10-19");
+	return (1);
+}
