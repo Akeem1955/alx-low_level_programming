@@ -14,17 +14,22 @@ int main(void)
 		{
 			for (k = 48; k <= 57; k++)
 			{
+				if (k == 48)
+				{
+					k = i;
+				}
 				for (l = 48; l <= 57; l++)
 				{
-					if (k >= i && (l > j || k > i))
+					if (l == 48 && k <= i)
 					{
-						putchar(i);
-						putchar(j);
-						putchar(' ');
-						putchar(k);
-						putchar(l);
+						l = j + 1;
 					}
-					if ((k >= i && (l > j || k > i)) && (i != 57 || j != 56))
+					putchar(i);
+					putchar(j);
+					putchar(' ');
+					putchar(k);
+					putchar(l);
+					if (i != 57 || j != 56)
 					{
 						putchar(',');
 						putchar(' ');
