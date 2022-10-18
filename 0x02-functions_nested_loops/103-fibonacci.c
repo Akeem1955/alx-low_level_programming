@@ -7,9 +7,13 @@
 
 int main(void)
 {
-	unsigned long int a, b, total, temp, i;
+	long int a, b, total, temp, i;
 
-	for (i = 0; i < 50; i++)
+	a = 1;
+	b = 2;
+	total = 0;
+
+	for (i = 0; i < 33; i++)
 	{
 		if (a % 2 == 0 && a <= 4000000)
 		{
@@ -22,7 +26,6 @@ int main(void)
 		a = b;
 		b = temp + a;
 	}
-	printf("%lu\n", total);
+	printf("%ld\n", total);
 	return (0);
 }
-
