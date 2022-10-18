@@ -7,16 +7,21 @@
 
 int main(void)
 {
-	unsigned long int a, b, temp;
+	unsigned long int a, b, temp, i;
 
 	a = 1;
 	b = 2;
 
-	for (int i = 0; i < 50; i++)
+	for (i = 0; i < 50; i++)
 	{
-		printf("%lld, ", a);
+		if (i < 49)
+		{
+			printf("%lu, ", a);
+		} else
+		{
+			printf("%lu", a);
+		}
 		temp = a;
-
 		a = b;
 		b = temp + a;
 	}
