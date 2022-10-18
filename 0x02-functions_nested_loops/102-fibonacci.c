@@ -7,14 +7,15 @@
 
 int main(void)
 {
-	long long int a = 1;
+	unsigned long int a, b, temp;
 
-	long long int b = 2;
+	a = 1;
+	b = 2;
 
 	for (int i = 0; i < 50; i++)
 	{
 		printf("%lld, ", a);
-		long long int temp = a;
+		temp = a;
 
 		a = b;
 		b = temp + a;

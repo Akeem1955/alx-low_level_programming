@@ -7,13 +7,14 @@
 
 void print_times_table(int n)
 {
+	int i, j, res;
 	if (n <= 15 && n >= 0)
 	{
-		for (int i = 0; i <= n; i++)
+		for (i = 0; i <= n; i++)
 		{
-			for (int j = 0; j <= n; j++)
+			for (j = 0; j <= n; j++)
 			{
-				int res = i * j;
+				res = i * j;
 
 				if (res >= 10)
 				{
