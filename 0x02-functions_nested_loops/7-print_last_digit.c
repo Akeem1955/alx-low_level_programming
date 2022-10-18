@@ -10,9 +10,9 @@ int print_last_digit(int l)
 {
 	if (l % 10 < 0)
 	{
-		printf("%d", (1 % 10) * -(1));
+		putchar(((1 % 10) * -(1)) + 48)
 		return ((l % 10) * -(1));
 	}
-	printf("%d", (l % 10))
+	_putchar((1 % 10) + 48)
 	return (l % 10);
 }
