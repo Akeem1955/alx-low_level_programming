@@ -21,7 +21,7 @@ void print_number(int n)
 		temp = n;
 	}
 
-	while (temp > 10)
+	while (temp >= 10)
 	{
 		power = power * 10;
 		temp = temp / 10;
