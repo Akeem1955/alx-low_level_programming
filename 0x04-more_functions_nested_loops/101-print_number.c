@@ -10,6 +10,7 @@ void print_number(int n)
 {
 	unsigned int temp, power;
 
+	power = 1;
 	if (n < 0)
 	{
 		n = n * -1;
