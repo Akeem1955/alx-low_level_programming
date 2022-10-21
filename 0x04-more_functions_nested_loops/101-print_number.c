@@ -8,7 +8,7 @@
 
 void print_number(int n)
 {
-	int temp, multiply;
+	unsigned int temp, multiply;
 
 	temp = 0;
 	if (n < 0)
@@ -39,4 +39,4 @@ void print_number(int n)
 	{
 		_putchar(48);
 	}
-}
+}i
