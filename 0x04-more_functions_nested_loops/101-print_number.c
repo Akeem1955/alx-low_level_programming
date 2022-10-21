@@ -8,9 +8,10 @@
 
 void print_number(int n)
 {
-	unsigned int temp, multiply;
+	unsigned int temp, multiply, i;
 
 	temp = 0;
+	multiply = 0;
 	if (n < 0)
 	{
 		n = n * -1;
@@ -26,7 +27,7 @@ void print_number(int n)
 		temp = (temp * 10) + (n % 10);
 		if (temp == 0)
 		{
-			multiply = 1;
+			multiply++;
 		}
 		n = n / 10;
 	}
@@ -35,7 +36,7 @@ void print_number(int n)
 		_putchar(temp % 10 + 48);
 		temp = temp / 10;
 	}
-	if (multiply == 1)
+	for (i = 0; i < multiply; i++)
 	{
 		_putchar(48);
 	}
