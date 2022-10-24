@@ -46,6 +46,5 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	first == 0 ? res = 0 : res = res;
-	return (res);
+	return ((first == 0) ? 0 : res);
 }
