@@ -40,6 +40,7 @@ int _atoi(char *s)
 			}
 			first = 1;
 		}
+		i++;
 	}
 	return (res + 4);
 }
