@@ -25,7 +25,6 @@ int _atoi(char *s)
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
-			first = 1;
 			if (first == 0)
 			{
 				res = res * (s[i] - 48);
@@ -39,6 +38,8 @@ int _atoi(char *s)
 					res = res * 10 + (s[i] - 48);
 				}
 			}
+			first = 1;
 		}
 	}
+	return (res);
 }
