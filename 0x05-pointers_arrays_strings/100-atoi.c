@@ -23,7 +23,7 @@ int _atoi(char *s)
 		{
 			res = res * 1;
 		}
-		if (s[i] >= '0' && s[i] <= '9')
+		if ((s[i] >= '0' && s[i] <= '9'))
 		{
 			if (first == 0)
 			{
@@ -39,8 +39,13 @@ int _atoi(char *s)
 				}
 			}
 			first = 1;
+			if ((s[i + 1] >= '0' && s[i + 1] <= '9') == 0)
+			{
+				break;
+			}
 		}
 		i++;
 	}
+	first == 0 ? res = 0 : res = res;
 	return (res);
 }
