@@ -41,5 +41,5 @@ int _atoi(char *s)
 			first = 1;
 		}
 	}
-	return (res + 4);
+	return (res);
 }
