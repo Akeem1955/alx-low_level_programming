@@ -19,6 +19,6 @@ int main(void)
 		pwd[i] = random;
 	}
 	pwd[i] = '\0';
-	printf("%s", password);
+	printf("%s", pwd);
 	return (0);
 }
