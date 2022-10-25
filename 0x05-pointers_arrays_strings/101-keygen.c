@@ -9,13 +9,13 @@
 
 int main(void)
 {
-	char *pwdGen, *pwdGen2, *pwdGen3, *pwdGen4, pwd[17];
+	char *pwdGen, *pwdGen2, *pwdGen3, *pwdGen4, pwd[60];
 
 	int len, i, random;
 
 	srand(time(0));
 	i = 0;
-	len = (rand() % 8) + 9;
+	len = (rand() % 8) + 52;
 	pwdGen = "abcdefghijklmnopqrstuvwxyz";
 	pwdGen2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	pwdGen3 = "@#$!*?&%]";
@@ -27,13 +27,13 @@ int main(void)
 			random = rand() % 26;
 			pwd[i] = pwdGen2[random];
 		}
-		else if (i < 5)
+		else if (i % 5 == 0 || i % 2 == 0)
 		{
 			random = rand() % 26;
 			pwd[i] = pwdGen[i];
 
 		}
-		else if (i < 9)
+		else if (i > 29)
 		{
 			random = rand() % 10;
 			pwd[i] = pwdGen4[random];
