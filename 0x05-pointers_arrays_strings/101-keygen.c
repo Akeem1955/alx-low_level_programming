@@ -46,5 +46,6 @@ int main(void)
 		len--;
 		i++;
 	}
+	printf("%s",pwd");
 	return (0);
 }
