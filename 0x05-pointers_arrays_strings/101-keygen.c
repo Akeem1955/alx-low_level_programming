@@ -9,11 +9,11 @@
 
 int main(void)
 {
-	srand(time(0));
 	char *pwdGen, *pwdGen2, *pwdGen3, *pwdGen4, *pwd;
 
-	int len, i;
+	int len, i, random;
 
+	srand(time(0));
 	i = 0;
 	len = (rand() % 8) + 9;
 	pwdGen = "abcdefghijklmnopqrstuvwxyz";
@@ -46,6 +46,6 @@ int main(void)
 		len--;
 		i++;
 	}
-	printf("%s",pwd");
+	printf("%s", pwd);
 	return (0);
 }
