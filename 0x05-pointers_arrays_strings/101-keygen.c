@@ -6,47 +6,47 @@
  * main - generate password
  * Return:0
  */
-
 int main(void)
 {
-	char *pwdGen, *pwdGen2, *pwdGen3, *pwdGen4, pwd[60];
-
-	int len, i, random;
+	char password[84];
+	int index = 0, sum = 0, diff_half1, diff_half2;
 
 	srand(time(0));
-	i = 0;
-	len = (rand() % 8) + 52;
-	pwdGen = "abcdefghijklmnopqrstuvwxyz";
-	pwdGen2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	pwdGen3 = "@#$!*?&%]";
-	pwdGen4 = "1234567890";
-	while (len >= 0)
-	{
-		if (i == 0)
-		{
-			random = rand() % 26;
-			pwd[i] = pwdGen2[random];
-		}
-		else if (i % 5 == 0 || i % 2 == 0)
-		{
-			random = rand() % 26;
-			pwd[i] = pwdGen[i];
 
-		}
-		else if (i > 29)
-		{
-			random = rand() % 10;
-			pwd[i] = pwdGen4[random];
-		}
-		else
-		{
-			random = rand() % 9;
-			pwd[i] = pwdGen3[random];
-		}
-		len--;
-		i++;
+	while (sum < 2772)
+	{
+		password[index] = 33 + rand() % 94;
+		sum += password[index++];
 	}
-	pwd[i] = '\0';
-	printf("%s", pwd);
+
+	password[index] = '\0';
+
+	if (sum != 2772)
+	{
+		diff_half1 = (sum - 2772) / 2;
+		diff_half2 = (sum - 2772) / 2;
+		if ((sum - 2772) % 2 != 0)
+			diff_half1++;
+
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half1))
+			{
+				password[index] -= diff_half1;
+				break;
+			}
+		}
+		for (index = 0; password[index]; index++)
+		{
+			if (password[index] >= (33 + diff_half2))
+			{
+				password[index] -= diff_half2;
+				break;
+			}
+		}
+	}
+
+	printf("%s", password);
+
 	return (0);
 }
