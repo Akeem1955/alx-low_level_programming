@@ -26,7 +26,7 @@ int main(void)
 			{
 				pwd[i] = random;
 				i++;
-			} else if (random >= 57 && <= 72)
+			} else if (random >= 57 && random <= 72)
 			{
 				pwd[i] = random;
 				i++;
