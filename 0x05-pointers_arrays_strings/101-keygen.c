@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-	char password[71];
+	char pwd[71];
 
 	int random, i;
 
