@@ -8,12 +8,13 @@
  */
 int main(void)
 {
-	char pwd[71];
+	char pwd[51];
 
 	int random, i;
 
 	srand(time(0));
-	while (i <  70)
+	i = 0;
+	while (i <  50)
 	{
 		random = rand() % 127;
 		if (random > 33)
