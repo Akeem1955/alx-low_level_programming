@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	char *pwdGen, *pwdGen2, *pwdGen3, *pwdGen4, *pwd;
+	char *pwdGen, *pwdGen2, *pwdGen3, *pwdGen4, pwd[17];
 
 	int len, i, random;
 
@@ -46,6 +46,7 @@ int main(void)
 		len--;
 		i++;
 	}
+	pwd[i] = '\0';
 	printf("%s", pwd);
 	return (0);
 }
