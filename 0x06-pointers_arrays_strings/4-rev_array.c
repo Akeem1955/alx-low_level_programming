@@ -9,25 +9,18 @@
 
 void reverse_array(int *a, int n)
 {
-	int i, temp, pow, j;
+	int i, temp, k, j;
 
 	i = 0;
 	j = n - 1;
-	while (i < n)
+	k = n / 2;
+	while (i < k)
 	{
-		pow = 1;
-		temp = a[j];
-		while (temp > 0)
-		{
-			pow = pow * 10;
-			temp = temp / 10;
-		}
-		pow = pow / 10;
-		temp = a[j];
-		while (pow >= 1)
-		{
-			_putchar((temp / pow) + 48);
-		}
+		temp = a[i];
+		a[i] = a[j];
+		a[j] = temp;
 		i++;
 		j--;
 	}
+}
+
