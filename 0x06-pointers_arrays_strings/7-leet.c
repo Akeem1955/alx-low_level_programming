@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * cap_string - appends to a string
+ * leet - encodes a string
  * @p:string
  * Return:char pointer
  */
@@ -9,8 +9,8 @@
 char *leet(char *p)
 {
 	int i, j;
-	char encodeA[]="aAeEoOtTlL";
-	char encodeB[]="4433007711";
+	char encodeA[] = "aAeEoOtTlL";
+	char encodeB[] = "4433007711";
 
 	i = 0;
 	while (p[i])
@@ -20,10 +20,9 @@ char *leet(char *p)
 		{
 			j++;
 		}
-		
 		if (p[i] == encodeA[j])
 		{
-			p[i] =encodeB[j];
+			p[i] = encodeB[j];
 		}
 		i++;
 	}
