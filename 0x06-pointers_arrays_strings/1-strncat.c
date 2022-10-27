@@ -1,13 +1,14 @@
 #include "main.h"
 
 /**
- * _strcat - appeends to a string
+ * _strncat - appeends to a string
  * @dest:destination
  * @src:source
+ * @n:num to append
  * Return:char pointer
  */
 
-char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src, int n)
 {
 	int i, j;
 
@@ -17,11 +18,12 @@ char *_strcat(char *dest, char *src)
 	{
 		i++;
 	}
-	while (src[j])
+	while (n > 0)
 	{
 		dest[i] = src[j];
 		i++;
 		j++;
+		n--;
 	}
 	dest[i] = '\0';
 	return (&dest[0]);
