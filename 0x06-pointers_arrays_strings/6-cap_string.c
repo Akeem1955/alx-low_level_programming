@@ -2,7 +2,7 @@
 
 /**
  * cap_string - appends to a string
- * @*:string
+ * @p:string
  * Return:char pointer
  */
 
@@ -19,7 +19,7 @@ char *cap_string(char *p)
 		{
 			t = p[i - 1];
 		}
-		if (p[i] >= 'a' && p[i]<= 'z')
+		if (p[i] >= 'a' && p[i] <= 'z')
 		{
 			if (t == '\n' || t == ' ' || t == ',' || t == '!')
 			{
