@@ -8,7 +8,7 @@
  * Return:char pointer
  */
 
-char *_strcat(char *dest, char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	int i, j;
 
@@ -18,7 +18,7 @@ char *_strcat(char *dest, char *src, int n)
 	{
 		i++;
 	}
-	while (n > 0)
+	while (n > 0 && src[j])
 	{
 		dest[i] = src[j];
 		i++;
