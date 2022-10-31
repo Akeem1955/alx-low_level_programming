@@ -4,7 +4,7 @@
  * _memset - fill n bytes of memory
  * @s:pointer
  * @b:char
- * @n amount of bytes
+ * @n: amount of bytes
  * Return: A pointer
  */
 
