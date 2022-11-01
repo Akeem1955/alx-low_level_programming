@@ -38,7 +38,7 @@ int main(void)
 {
     char buffer[98] = "First, solve the problem. Then, write the code.";
     char buffer2[98] = "Talk is cheap. Show me the code.";
-    _memcpy(buffer, buffer2, 33);
+    _memcpy(buffer, buffer2, 10);
     printf("%s",buffer);
     return (0);
 }
