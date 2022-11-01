@@ -36,12 +36,9 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char buffer[98] = {0};
-    char buffer2[98] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14};
-
-    simple_print_buffer(buffer, 98);
-    _memcpy(buffer + 50, buffer2, 10);
-    printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 98);    
+    char buffer[98] = "First, solve the problem. Then, write the code.";
+    char buffer2[98] = "Talk is cheap. Show me the code.";
+    _memcpy(buffer, buffer2, 33);
+    printf("%s",buffer);
     return (0);
 }
