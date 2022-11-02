@@ -8,8 +8,8 @@
  */
 int main(void)
 {
-    char *s = "hello, world";
-    char *f = "s";
+    char *s = "abcdef";
+    char *f = "";
     char *t;
 
     t = _strpbrk(s, f);

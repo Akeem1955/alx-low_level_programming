@@ -31,5 +31,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 		j++;
 	}
-	return (&s[j]);
+	return (0);
 }
