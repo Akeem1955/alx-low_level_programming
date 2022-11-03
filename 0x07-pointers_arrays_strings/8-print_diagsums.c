@@ -1,4 +1,5 @@
 #include "main.h"
+#include<stdio.h>
 
 /**
  * print_diagsums - print chess
@@ -9,7 +10,7 @@
 
 void print_diagsums(int *a, int size)
 {
-	int i, resA, k, n, low, high;
+	int i, resA, low, high, resB;
 
 	low = 0;
 	high = size - 1;
@@ -17,9 +18,10 @@ void print_diagsums(int *a, int size)
 	resB = 0;
 	for (i = 0; i < size; i++)
 	{
-		resA += a[i][low];
-		resB += a[i][high];
-		low++;
-		high--;
+		resA = resA + a[low];
+		resB = resB + a[high];
+		low += size + 1;
+		high += size - 1;
 	}
+	printf("%d, %d\n", resA, resB);
 }
