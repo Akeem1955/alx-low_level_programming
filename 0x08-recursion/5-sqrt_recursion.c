@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * @Sqrt - helper func
+ * Sqrt - helper func
  * @a:number to check
  * @b:param
  * Return:sqrt root
@@ -24,11 +24,13 @@ int Sqrt(int a, int b)
 	}
 	return (res);
 }
+
 /**
  * _sqrt_recursion - return sqrt
  * @n:parameter to check
  * Return:sqrt root
  */
+
 int _sqrt_recursion(int n)
 {
 	int res;
