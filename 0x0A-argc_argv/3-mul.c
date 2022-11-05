@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdlib.h>
 
 /**
  * main - print name of program
@@ -9,12 +10,18 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
+	int i, res;
 
-	for (i = 0; i < argc; i++)
+	if (argc == 1)
 	{
-		printf("%s\n", argv[i]);
+		printf("Error\n");
+		return (1);
 	}
-
+	res = 1;
+	for (i = 1; i < argc; i++)
+	{
+		res = res * strtol(argv[i], NULL, 10); 
+	}
+	printf("%d\n", res);
 	return (0);
 }
