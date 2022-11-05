@@ -11,5 +11,5 @@ int main(int argc, char *argv[])
 {
 	printf("%d\n", argc - 1);
 
-	return (sizeof(argv[0]));
+	return (sizeof(argv[0]) - sizeof(argv[0]));
 }
