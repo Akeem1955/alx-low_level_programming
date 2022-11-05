@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	res = 1;
 	for (i = 1; i < argc; i++)
 	{
-		res = res * strtol(argv[i], NULL, 10); 
+		res = res * strtol(argv[i], NULL, 10);
 	}
 	printf("%d\n", res);
 	return (0);
